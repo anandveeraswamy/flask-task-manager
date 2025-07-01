@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main%}
+    <div id="container" class="task-list">
+        <h2>Task List</h2>
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task }}
+                    <a class="delete-task" href="{{ url_for("delete_task", task_id=loop.index0) }}">❌</a>
+                </li>
+            {% else %}
+              <li class="placeholder-task">You're all done........... Or are you? Challenge yourself, add some new tasks to accomplish.</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <main>
+        <div id="container" class="task-list">
+            <form action="{{ url_for('add_task')}}" method="POST">
+                <input id="task" type="text" name="task" placeholder="Enter Task">
+                <button type="submit">Add</button>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename="scripts/script.js") }}"></script>
+{% endblock %}
+
