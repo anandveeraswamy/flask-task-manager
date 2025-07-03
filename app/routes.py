@@ -1,9 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for
-
-app = Flask(__name__)
+from app import app
+from flask import render_template, request, redirect, url_for
 
 tasks = []
-
 
 @app.route("/")
 @app.route("/home")
